@@ -28,8 +28,10 @@ const Header = () => {
                     <div className="flex justify-start items-center">
                         <Link to="/" className="flex mr-4 font-semibold">
                             <h1 className="text-xl">
-                                <span className="text-primary-700">Admin</span>{" "}
-                                Panel
+                                <span className="text-primary-700">
+                                    Boss International
+                                </span>{" "}
+                                Admin Panel
                             </h1>
                         </Link>
                     </div>

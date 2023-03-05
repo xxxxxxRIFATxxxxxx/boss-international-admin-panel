@@ -26,6 +26,7 @@ const Create = ({ showCreateModal, setShowCreateModal }) => {
     const [notes, setNotes] = useState("");
     const [productsInput, setProductsInput] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
+    const [status, setStatus] = useState("");
 
     const { createOrder } = useOrders();
     const { users } = useAuth();
@@ -54,6 +55,7 @@ const Create = ({ showCreateModal, setShowCreateModal }) => {
             notes,
             products: [],
             totalPrice,
+            status,
         };
 
         createOrder(order)
@@ -76,6 +78,7 @@ const Create = ({ showCreateModal, setShowCreateModal }) => {
                     setNotes("");
                     setProductsInput([]);
                     setTotalPrice(0);
+                    setStatus("");
                 } else {
                     setIsError(true);
                     setIsLoading(false);
@@ -353,6 +356,25 @@ const Create = ({ showCreateModal, setShowCreateModal }) => {
                                             </option>
                                         );
                                     })}
+                                </select>
+                            </div>
+
+                            <div>
+                                <label className="block mb-2 text-sm font-medium text-gray-900 ">
+                                    Status
+                                </label>
+
+                                <select
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                                    onChange={(e) => setStatus(e.target.value)}
+                                    required
+                                >
+                                    <option value="">Select status</option>
+
+                                    <option>Pending</option>
+                                    <option>Processing</option>
+                                    <option>Complete</option>
+                                    <option>Decline</option>
                                 </select>
                             </div>
                         </div>

@@ -88,7 +88,10 @@ const SignUp = () => {
                     className="flex items-center mb-6 text-2xl font-semibold text-gray-900"
                 >
                     <h1 className="text-xl">
-                        <span className="text-primary-700">Admin</span> Panel
+                        <span className="text-primary-700">
+                            Boss International
+                        </span>{" "}
+                        Admin Panel
                     </h1>
                 </Link>
 

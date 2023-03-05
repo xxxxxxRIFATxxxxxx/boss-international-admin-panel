@@ -168,6 +168,10 @@ const Table = ({ orders, isLoading, successMessage, errorMessage }) => {
                                         </th>
 
                                         <th scope="col" className="px-4 py-3">
+                                            Status
+                                        </th>
+
+                                        <th scope="col" className="px-4 py-3">
                                             Action
                                         </th>
                                     </tr>
@@ -277,6 +281,10 @@ const Table = ({ orders, isLoading, successMessage, errorMessage }) => {
 
                                                 <td className="px-4 py-2">
                                                     {order.totalPrice}
+                                                </td>
+
+                                                <td className="px-4 py-2">
+                                                    {order?.status}
                                                 </td>
 
                                                 <td className="px-4 py-2">
